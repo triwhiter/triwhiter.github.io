@@ -6,20 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://triwhiter.github.io">
-  <title>校oj之事件安排 | 白菜园</title>
+  <title>Tag: 刷题,回溯,dfs | 白菜园</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="503.事件安排 (10分)C时间限制：3000 毫秒 |  C内存限制：3000 Kb 题目内容：小张最近很忙，记事本里有n件事情等待处理，每件事处理完毕后，能得到不同的奖励，而且都有一个截止日。一件事处理需要一整天时间，并且小张不能同时干其他事情。请你替小张安排一个事情处理的时间表，争取获得最大的奖励。">
-<meta name="keywords" content="刷题,贪心">
-<meta property="og:type" content="article">
-<meta property="og:title" content="校oj之事件安排">
-<meta property="og:url" content="http://triwhiter.github.io/2019/11/04/校oj之事件安排/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="白菜园">
+<meta property="og:url" content="http://triwhiter.github.io/tags/刷题-回溯-dfs/index.html">
 <meta property="og:site_name" content="白菜园">
-<meta property="og:description" content="503.事件安排 (10分)C时间限制：3000 毫秒 |  C内存限制：3000 Kb 题目内容：小张最近很忙，记事本里有n件事情等待处理，每件事处理完毕后，能得到不同的奖励，而且都有一个截止日。一件事处理需要一整天时间，并且小张不能同时干其他事情。请你替小张安排一个事情处理的时间表，争取获得最大的奖励。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-10T04:06:22.829Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="校oj之事件安排">
-<meta name="twitter:description" content="503.事件安排 (10分)C时间限制：3000 毫秒 |  C内存限制：3000 Kb 题目内容：小张最近很忙，记事本里有n件事情等待处理，每件事处理完毕后，能得到不同的奖励，而且都有一个截止日。一件事处理需要一整天时间，并且小张不能同时干其他事情。请你替小张安排一个事情处理的时间表，争取获得最大的奖励。">
+<meta name="twitter:title" content="白菜园">
   
     <link rel="alternative" href="/atom.xml" title="白菜园" type="application/atom+xml">
   
@@ -147,196 +142,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-校oj之事件安排" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      校oj之事件安排
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/11/10/校oj之n皇后/" class="archive-article-date">
+  	<time datetime="2019-11-10T03:26:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-10</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/11/10/校oj之n皇后/">校oj之n皇后</a>
     </h1>
   
 
-        
-        <a href="/2019/11/04/校oj之事件安排/" class="archive-article-date">
-  	<time datetime="2019-11-04T13:40:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="503-事件安排-10分"><a href="#503-事件安排-10分" class="headerlink" title="503.事件安排 (10分)"></a>503.事件安排 (10分)</h2><p>C时间限制：3000 毫秒 |  C内存限制：3000 Kb</p>
-<h3 id="题目内容："><a href="#题目内容：" class="headerlink" title="题目内容："></a><font color="#314EB3">题目内容：</font></h3><p>小张最近很忙，记事本里有n件事情等待处理，每件事处理完毕后，能得到不同的奖励，而且都有一个截止日。一件事处理需要一整天时间，并且小张不能同时干其他事情。请你替小张安排一个事情处理的时间表，争取获得最大的奖励。</p>
-<a id="more"></a>
-<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a><font color="#314EB3">输入描述</font></h3><p>第一行输入整数n,表示n个事情。随后输入n行，每行包括一个事情的截止日（不大于n）和处理收益。</p>
-<h3 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a><font color="#314EB3">输出描述</font></h3><p>输出最大的总收益。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a><font color="#314EB3">输入样例</font></h3><p>5<br>2 5<br>2 7<br>2 6<br>2 8<br>3 3</p>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a><font color="#314EB3">输出样例</font></h3><p>18</p>
-<h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><p>一个基本的贪心算法，就只需要考虑两点。第一点，每次尽可能地取报酬最多的；第二点，尽可能放在靠后的日期，（最好放在截止日期）。<br>第一点很好办，排个序就行。关键是第二点，其实也很简单，只需要用一个数组来标记某一天是否被安排事件了就行。从截止日期向前找，如果前面都被安排满了，当然这个事件就被舍弃。如果找到空余的天，就将此事件安排在这一天。</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">thing</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> deadline;</span><br><span class="line">    <span class="keyword">int</span> award;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(thing a,thing b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.award&gt;b.award;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">thing th[<span class="number">1000</span>];   <span class="comment">//事件数组（包含该事件的截止日期与工作报酬） </span></span><br><span class="line"><span class="keyword">int</span> vi[<span class="number">1000</span>];     <span class="comment">//标记数组，判断第i天是否被安排工作，是则为1，否则为0 </span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,sum=<span class="number">0</span>,day=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;th[i].deadline&gt;&gt;th[i].award;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(th,th+n,cmp);     <span class="comment">//按报酬由多到少排序 </span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> j;</span><br><span class="line">        <span class="keyword">for</span>(j=th[i].deadline;j&gt;<span class="number">0</span>;j--)&#123;   <span class="comment">//判断此事件截止日期之前是否还有空闲的天 </span></span><br><span class="line">            <span class="keyword">if</span>(vi[j]==<span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(j!=<span class="number">0</span>)&#123;             <span class="comment">// 如果存在空闲的天，则将事件安排在此天</span></span><br><span class="line">            sum+=th[i].award;</span><br><span class="line">            vi[j]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;sum;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">刷题,贪心</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">刷题,回溯,dfs</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://triwhiter.github.io/2019/11/04/校oj之事件安排/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/11/10/校oj之n皇后/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          校oj之n皇后
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/10/21/个人博客/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">暑期答辩--个人博客</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
-  
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: "http://triwhiter.github.io/2019/11/04/校oj之事件安排/", 
-    sourceId: "校oj之事件安排",
-    productKey: "true",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -359,9 +218,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

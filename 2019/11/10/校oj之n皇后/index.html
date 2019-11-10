@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://triwhiter.github.io">
-  <title>校oj之事件安排 | 白菜园</title>
+  <title>校oj之n皇后 | 白菜园</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="503.事件安排 (10分)C时间限制：3000 毫秒 |  C内存限制：3000 Kb 题目内容：小张最近很忙，记事本里有n件事情等待处理，每件事处理完毕后，能得到不同的奖励，而且都有一个截止日。一件事处理需要一整天时间，并且小张不能同时干其他事情。请你替小张安排一个事情处理的时间表，争取获得最大的奖励。">
-<meta name="keywords" content="刷题,贪心">
+  <meta name="description" content="104.N皇后 (15分)C时间限制：3000 毫秒 |  C内存限制：3000 Kb 题目内容： 国际象棋中的皇后可以沿着水平线，垂直线，或者斜线前进，吃掉遇到的所有棋子，如果棋盘上有八个皇后，则这八个皇后如何相安无事的放置在棋盘上，1970年与1971年， E.W.Dijkstra与N.Wirth曾经用这个问题来讲解程式设计之技巧。该题要求N皇后的放置结果共有多少种 输入描述输入一个正整数N（">
+<meta name="keywords" content="刷题,回溯,dfs">
 <meta property="og:type" content="article">
-<meta property="og:title" content="校oj之事件安排">
-<meta property="og:url" content="http://triwhiter.github.io/2019/11/04/校oj之事件安排/index.html">
+<meta property="og:title" content="校oj之n皇后">
+<meta property="og:url" content="http://triwhiter.github.io/2019/11/10/校oj之n皇后/index.html">
 <meta property="og:site_name" content="白菜园">
-<meta property="og:description" content="503.事件安排 (10分)C时间限制：3000 毫秒 |  C内存限制：3000 Kb 题目内容：小张最近很忙，记事本里有n件事情等待处理，每件事处理完毕后，能得到不同的奖励，而且都有一个截止日。一件事处理需要一整天时间，并且小张不能同时干其他事情。请你替小张安排一个事情处理的时间表，争取获得最大的奖励。">
+<meta property="og:description" content="104.N皇后 (15分)C时间限制：3000 毫秒 |  C内存限制：3000 Kb 题目内容： 国际象棋中的皇后可以沿着水平线，垂直线，或者斜线前进，吃掉遇到的所有棋子，如果棋盘上有八个皇后，则这八个皇后如何相安无事的放置在棋盘上，1970年与1971年， E.W.Dijkstra与N.Wirth曾经用这个问题来讲解程式设计之技巧。该题要求N皇后的放置结果共有多少种 输入描述输入一个正整数N（">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-10T04:06:22.829Z">
+<meta property="og:updated_time" content="2019-11-10T04:11:40.225Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="校oj之事件安排">
-<meta name="twitter:description" content="503.事件安排 (10分)C时间限制：3000 毫秒 |  C内存限制：3000 Kb 题目内容：小张最近很忙，记事本里有n件事情等待处理，每件事处理完毕后，能得到不同的奖励，而且都有一个截止日。一件事处理需要一整天时间，并且小张不能同时干其他事情。请你替小张安排一个事情处理的时间表，争取获得最大的奖励。">
+<meta name="twitter:title" content="校oj之n皇后">
+<meta name="twitter:description" content="104.N皇后 (15分)C时间限制：3000 毫秒 |  C内存限制：3000 Kb 题目内容： 国际象棋中的皇后可以沿着水平线，垂直线，或者斜线前进，吃掉遇到的所有棋子，如果棋盘上有八个皇后，则这八个皇后如何相安无事的放置在棋盘上，1970年与1971年， E.W.Dijkstra与N.Wirth曾经用这个问题来讲解程式设计之技巧。该题要求N皇后的放置结果共有多少种 输入描述输入一个正整数N（">
   
     <link rel="alternative" href="/atom.xml" title="白菜园" type="application/atom+xml">
   
@@ -147,37 +147,37 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-校oj之事件安排" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-校oj之n皇后" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      校oj之事件安排
+      校oj之n皇后
     </h1>
   
 
         
-        <a href="/2019/11/04/校oj之事件安排/" class="archive-article-date">
-  	<time datetime="2019-11-04T13:40:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-04</time>
+        <a href="/2019/11/10/校oj之n皇后/" class="archive-article-date">
+  	<time datetime="2019-11-10T03:26:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-10</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="503-事件安排-10分"><a href="#503-事件安排-10分" class="headerlink" title="503.事件安排 (10分)"></a>503.事件安排 (10分)</h2><p>C时间限制：3000 毫秒 |  C内存限制：3000 Kb</p>
-<h3 id="题目内容："><a href="#题目内容：" class="headerlink" title="题目内容："></a><font color="#314EB3">题目内容：</font></h3><p>小张最近很忙，记事本里有n件事情等待处理，每件事处理完毕后，能得到不同的奖励，而且都有一个截止日。一件事处理需要一整天时间，并且小张不能同时干其他事情。请你替小张安排一个事情处理的时间表，争取获得最大的奖励。</p>
-<a id="more"></a>
-<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a><font color="#314EB3">输入描述</font></h3><p>第一行输入整数n,表示n个事情。随后输入n行，每行包括一个事情的截止日（不大于n）和处理收益。</p>
-<h3 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a><font color="#314EB3">输出描述</font></h3><p>输出最大的总收益。</p>
-<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a><font color="#314EB3">输入样例</font></h3><p>5<br>2 5<br>2 7<br>2 6<br>2 8<br>3 3</p>
-<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a><font color="#314EB3">输出样例</font></h3><p>18</p>
-<h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><p>一个基本的贪心算法，就只需要考虑两点。第一点，每次尽可能地取报酬最多的；第二点，尽可能放在靠后的日期，（最好放在截止日期）。<br>第一点很好办，排个序就行。关键是第二点，其实也很简单，只需要用一个数组来标记某一天是否被安排事件了就行。从截止日期向前找，如果前面都被安排满了，当然这个事件就被舍弃。如果找到空余的天，就将此事件安排在这一天。</p>
-<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">thing</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> deadline;</span><br><span class="line">    <span class="keyword">int</span> award;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(thing a,thing b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.award&gt;b.award;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">thing th[<span class="number">1000</span>];   <span class="comment">//事件数组（包含该事件的截止日期与工作报酬） </span></span><br><span class="line"><span class="keyword">int</span> vi[<span class="number">1000</span>];     <span class="comment">//标记数组，判断第i天是否被安排工作，是则为1，否则为0 </span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,sum=<span class="number">0</span>,day=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;th[i].deadline&gt;&gt;th[i].award;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(th,th+n,cmp);     <span class="comment">//按报酬由多到少排序 </span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> j;</span><br><span class="line">        <span class="keyword">for</span>(j=th[i].deadline;j&gt;<span class="number">0</span>;j--)&#123;   <span class="comment">//判断此事件截止日期之前是否还有空闲的天 </span></span><br><span class="line">            <span class="keyword">if</span>(vi[j]==<span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(j!=<span class="number">0</span>)&#123;             <span class="comment">// 如果存在空闲的天，则将事件安排在此天</span></span><br><span class="line">            sum+=th[i].award;</span><br><span class="line">            vi[j]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;sum;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="104-N皇后-15分"><a href="#104-N皇后-15分" class="headerlink" title="104.N皇后 (15分)"></a>104.N皇后 (15分)</h2><p>C时间限制：3000 毫秒 |  C内存限制：3000 Kb</p>
+<h3 id="题目内容："><a href="#题目内容：" class="headerlink" title="题目内容："></a><font color="#314EB3">题目内容：</font></h3><p> 国际象棋中的皇后可以沿着水平线，垂直线，或者斜线前进，吃掉遇到的所有棋子，如果棋盘上有八个皇后，则这八个皇后如何相安无事的<br>放置在棋盘上，1970年与1971年， E.W.Dijkstra与N.Wirth曾经用这个问题来讲解程式设计之技巧。<br>该题要求N皇后的放置结果共有多少种</p>
+<h3 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述"></a><font color="#314EB3">输入描述</font></h3><p>输入一个正整数N（N小于16）</p>
+<h3 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述"></a><font color="#314EB3">输出描述</font></h3><p>输出结果</p>
+<h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a><font color="#314EB3">输入样例</font></h3><p>8</p>
+<h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a><font color="#314EB3">输出样例</font></h3><p>92</p>
+<h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><p>这题主要涉及回溯算法，可以用dfs来解决。本质上讲就是通过深搜来枚举所有的方案。而如何实现，可以选择递归或者非递归两种形式，递归复杂度要高些，但是比较好理解，这里就从递归的角度来讲解。<br>需要考虑的问题：<br>1.用什么模拟棋盘，表示某个位置是否放置了皇后<br>2.如何判断此位置可以放置皇后，即它与已经放置了的皇后们不在同一行，同一列，同一对角线上。<br>解决办法：<br>首先需要思考用什么来模拟棋盘，我第一时间想到了二维数组a[i][j]，表示第i行第j列是否放置了皇后。但是使用二维数组每次完成一种方案后都需要清空数组，不然会影响下一次方案的实现。后来便改为用一维数组来表示。把棋盘存储为一个N维数组a[N]，数组中第i个元素的值代表第i行的皇后位置，这样便可以把问题的空间规模压缩为一维O(N)。<br>在判断是否冲突时也很简单，首先每行只有一个皇后，且在数组中只占据一个元素的位置，行冲突就不存在了，其次是列冲突，判断一下是否有a[i]与当前要放置皇后的列j相等即可。至于斜线冲突，通过观察可以发现所有在斜线上冲突的皇后的位置都有规律即<font color="red">它们所在的行列互减的绝对值相等，即| row – i | = | col – a[i] | </font>。这样某个位置是否可以放置皇后的问题已经解决。</p>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h4><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAX_SIZE 20</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> queen[MAX_SIZE];  <span class="comment">//用一维数组模拟棋盘，判断第i行，第queen[i]列是否被放置一个皇后 </span></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> sum=<span class="number">0</span>; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">check_place</span><span class="params">(<span class="keyword">int</span> row,<span class="keyword">int</span> col)</span></span>&#123; <span class="comment">//判断第row行，第col列是否可以放置皇后 </span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;row;i++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(queen[i]==col||<span class="built_in">abs</span>(row-i)==<span class="built_in">abs</span>(col-queen[i])) <span class="comment">//判断列冲突与斜线上的冲突 </span></span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">dfs</span><span class="params">(<span class="keyword">int</span> row)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(row==n)&#123;  <span class="comment">//如果行数走完，则n个皇后都已成功放置，故方案数加1，然后回溯上去 </span></span><br><span class="line">        sum++;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> col;</span><br><span class="line">    <span class="keyword">for</span>(col=<span class="number">0</span>;col&lt;n;col++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(check_place(row,col))&#123;  <span class="comment">//如果可以放置 </span></span><br><span class="line">            queen[row]=col;       <span class="comment">//则在此位置放置一个皇后 </span></span><br><span class="line">            dfs(row+<span class="number">1</span>);           <span class="comment">//然后跳到下一行 </span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(col==n)                   <span class="comment">//如果这一行的列数走完都没有位置放置皇后，则向上回溯 </span></span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    dfs(<span class="number">0</span>);</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;sum;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
+<h4 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h4><p>此题还要一种更加高效快速的方法，方法涉及位运算。这里就不给描述了。<br>代码如下：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">long</span> sum=<span class="number">0</span>, upperlim=<span class="number">1</span>;     </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">(<span class="keyword">long</span> row, <span class="keyword">long</span> ld, <span class="keyword">long</span> rd)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (row!=upperlim)  </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">long</span> pos = upperlim &amp; ~(row | ld | rd); </span><br><span class="line">        <span class="keyword">while</span> (pos)    </span><br><span class="line">        &#123;</span><br><span class="line">        <span class="keyword">long</span> p=pos&amp;-pos;        </span><br><span class="line">        pos-=p; </span><br><span class="line">         </span><br><span class="line">        test(row+p, (ld+p)&lt;&lt;<span class="number">1</span>,(rd+p)&gt;&gt;<span class="number">1</span>);                              </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span>   </span><br><span class="line">        sum++;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n); </span><br><span class="line">    upperlim = (upperlim &lt;&lt; n) - <span class="number">1</span>;         </span><br><span class="line">    test(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sum);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -211,7 +211,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">刷题,贪心</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">刷题,回溯,dfs</a>
         		</li>
       		
 		</ul>
@@ -267,7 +267,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://triwhiter.github.io/2019/11/04/校oj之事件安排/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://triwhiter.github.io/2019/11/10/校oj之n皇后/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -281,18 +281,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/11/10/校oj之n皇后/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          校oj之n皇后
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/10/21/个人博客/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">暑期答辩--个人博客</div>
+    <a href="/2019/11/04/校oj之事件安排/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">校oj之事件安排</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -323,8 +314,8 @@
   <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
 <script>
   var cloudTieConfig = {
-    url: "http://triwhiter.github.io/2019/11/04/校oj之事件安排/", 
-    sourceId: "校oj之事件安排",
+    url: "http://triwhiter.github.io/2019/11/10/校oj之n皇后/", 
+    sourceId: "校oj之n皇后",
     productKey: "true",
     target: "cloud-tie-wrapper"
   };
