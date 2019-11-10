@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="白菜园">
 <meta property="og:description" content="503.事件安排 (10分)C时间限制：3000 毫秒 |  C内存限制：3000 Kb 题目内容：小张最近很忙，记事本里有n件事情等待处理，每件事处理完毕后，能得到不同的奖励，而且都有一个截止日。一件事处理需要一整天时间，并且小张不能同时干其他事情。请你替小张安排一个事情处理的时间表，争取获得最大的奖励。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-10T04:28:53.426Z">
+<meta property="og:updated_time" content="2019-11-10T07:55:20.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="校oj之事件安排">
 <meta name="twitter:description" content="503.事件安排 (10分)C时间限制：3000 毫秒 |  C内存限制：3000 Kb 题目内容：小张最近很忙，记事本里有n件事情等待处理，每件事处理完毕后，能得到不同的奖励，而且都有一个截止日。一件事处理需要一整天时间，并且小张不能同时干其他事情。请你替小张安排一个事情处理的时间表，争取获得最大的奖励。">
@@ -175,7 +175,7 @@
 <h3 id="输入样例"><a href="#输入样例" class="headerlink" title="输入样例"></a><font color="#314EB3">输入样例</font></h3><p>5<br>2 5<br>2 7<br>2 6<br>2 8<br>3 3</p>
 <h3 id="输出样例"><a href="#输出样例" class="headerlink" title="输出样例"></a><font color="#314EB3">输出样例</font></h3><p>18</p>
 <p><strong><em>解题思路</em></strong></p>
-<p>一个基本的贪心算法，就只需要考虑两点。第一点，每次尽可能地取报酬最多的；第二点，尽可能放在靠后的日期，（最好放在截止日期）。<br>第一点很好办，排个序就行。关键是第二点，其实也很简单，只需要用一个数组来标记某一天是否被安排事件了就行。从截止日期向前找，如果前面都被安排满了，当然这个事件就被舍弃。如果找到空余的天，就将此事件安排在这一天。</p>
+<p>&ensp;&ensp;一个基本的贪心算法，就只需要考虑两点。第一点，每次尽可能地取报酬最多的；第二点，尽可能放在靠后的日期，（最好放在截止日期）。<br>&ensp;&ensp;第一点很好办，排个序就行。关键是第二点，其实也很简单，只需要用一个数组来标记某一天是否被安排事件了就行。从截止日期向前找，如果前面都被安排满了，当然这个事件就被舍弃。如果找到空余的天，就将此事件安排在这一天。</p>
 <p><strong><em>代码</em></strong></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">thing</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> deadline;</span><br><span class="line">    <span class="keyword">int</span> award;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(thing a,thing b)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a.award&gt;b.award;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">thing th[<span class="number">1000</span>];   <span class="comment">//事件数组（包含该事件的截止日期与工作报酬） </span></span><br><span class="line"><span class="keyword">int</span> vi[<span class="number">1000</span>];     <span class="comment">//标记数组，判断第i天是否被安排工作，是则为1，否则为0 </span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> n,sum=<span class="number">0</span>,day=<span class="number">0</span>;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="built_in">cin</span>&gt;&gt;th[i].deadline&gt;&gt;th[i].award;</span><br><span class="line">    &#125;</span><br><span class="line">    sort(th,th+n,cmp);     <span class="comment">//按报酬由多到少排序 </span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">        <span class="keyword">int</span> j;</span><br><span class="line">        <span class="keyword">for</span>(j=th[i].deadline;j&gt;<span class="number">0</span>;j--)&#123;   <span class="comment">//判断此事件截止日期之前是否还有空闲的天 </span></span><br><span class="line">            <span class="keyword">if</span>(vi[j]==<span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(j!=<span class="number">0</span>)&#123;             <span class="comment">// 如果存在空闲的天，则将事件安排在此天</span></span><br><span class="line">            sum+=th[i].award;</span><br><span class="line">            vi[j]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;sum;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -439,6 +439,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">贪心</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">回溯</a>
               </li>
              
@@ -447,7 +451,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">贪心</a>
+                <a href="javascript:void(0)" class="js-tag color1">拓展gcd</a>
               </li>
              
               <li class="article-tag-list-item">
