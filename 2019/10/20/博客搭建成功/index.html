@@ -180,6 +180,14 @@
       </header>
     
     <div class="article-entry" itemprop="articleBody">
+	<!-- 文章头增加转载声明 -->
+
+      
+      
+        <div class="topdeclare" hidden="hidden"></div>
+      
+      
+      <!-- 文章头增加转载声明结束 -->
       
         <h2 id="博客终于搭建成功了"><a href="#博客终于搭建成功了" class="headerlink" title="博客终于搭建成功了"></a>博客终于搭建成功了</h2><h3 id="第一坑"><a href="#第一坑" class="headerlink" title="第一坑"></a>第一坑</h3><p>之前一直困扰我，网页名修改为中文的乱码问题，用notepad++，将其编码改为utf-8就行了。<br>也看清了一个坑，window自带的记事本很不好用，还有个sb的设定。<br>千万不要使用Windows自带的记事本编辑任何文本文件。<br>原因是Microsoft开发记事本的团队使用了一个非常弱智的行为来保存UTF-8编码的文件，他们自作聪明地在每个文件开头添加了0xefbbbf（十六进制）的字符，你会遇到很多不可思议的问题，比如，网页第一行可能会显示一个“?”，明明正确的程序一编译就报语法错误，等等，都是由记事本的弱智行为带来的。建议你下载Notepad++、Editplus等代替记事本，不但功能强大，而且免费！记得把Notepad++的默认编码设置为UTF-8 without BOM(由于兼容性，带BOM的utf-8在一些浏览器中显示为乱码)即可。</p>
 <h3 id="第二坑"><a href="#第二坑" class="headerlink" title="第二坑"></a>第二坑</h3><p>ssh密匙</p>
